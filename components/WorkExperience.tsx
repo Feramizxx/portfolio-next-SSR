@@ -18,7 +18,7 @@ export default function WorkExperience({ experiences}: Props) {
         Experience
       </h3>
 
-      <div className="flex -mb-24 items-center justify-center scrollbar  scrollbar-thumb-[#F7AB0A]/80 space-x-5 w-full overflow-x-scroll snap-x p-10  snap-mandatory">
+      <div className={`flex -mb-24 ${experiences.length!=1? 'items-start justify-start ' :'items-center justify-center'}  scrollbar  scrollbar-thumb-[#F7AB0A]/80 space-x-5 w-full overflow-x-scroll snap-x   snap-mandatory`}>
        {experiences.map((experience)=>{
         return(
           <ExperienceCard key={experience._id} experience={experience}/>
