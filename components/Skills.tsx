@@ -24,13 +24,13 @@ function Skills({ skills }: Props) {
       </h3>
 
       <div className={`gap-2 mt-[13vh] grid grid-cols-4 sm:gap-5 sm:mt-20 xl:scale-90 xl:translate-y-12`}>
-        {skills?.slice(0, skills.length / 2).map((skill) => (
+        {skills?.map((skill) => (
           <Skill key={skill._id} skill={skill}  />
         ))}
 
-        {skills?.slice(skills.length / 2, skills.length).map((skill) => (
+        {/* {skills?.slice(skills.length / 2, skills.length).map((skill) => (
           <Skill key={skill._id} skill={skill} directionLeft />
-        ))}
+        ))} */}
       </div>
     </motion.div>
   );
