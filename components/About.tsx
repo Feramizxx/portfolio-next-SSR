@@ -23,12 +23,12 @@ export default function About({pageInfo}: Props) {
             duration: 1.2,
           }}
           viewport={{ once: true }}
-          className="-mb-20 md:mb-0 mt-32 flex-shrink-0 object-cover w-56 h-56 rounded-full md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]"
+          className="-mb-20 md:mb-0 mt-32 md:mt-8 lg:mt-32 flex-shrink-0 object-cover  w-56 h-56 rounded-full md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]"
           src={urlFor(pageInfo.profilePic).url()}
 />
         <div className="px-0 md:px-10  space-y-10">
-          <h4 className="text-4xl font-semibold"> Background Circles</h4>
-          <p className="text-base">
+          <h4 className="text-4xl font-semibold mt-10"> Background Circles</h4>
+          <p className="text-base border-[1px] border-yellow-500 rounded-lg py-1 overflow-y-auto max-h-40 md:max-h-full px-2 text-start md:text-center md:border-none scrollbar scrollbar-thumb-[#F7AB0A]/80 ">
            {pageInfo.backGroundInformation}
           </p>
         </div>

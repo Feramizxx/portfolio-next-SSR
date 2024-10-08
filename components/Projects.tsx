@@ -20,7 +20,7 @@ export default function Projects({ project }: Props) {
         Projects
       </h3>
       <div className="w-screen -mb-20  flex relative overflow-y-hidden overflow-x-scroll snap-x snap-mandatory z-20">
-        {project.map((item, index) => {
+        {project.sort((a, b) => new Date(b._createdAt).getTime() - new Date(a._createdAt).getTime()).map((item, index) => {
           return (
             <div
               key={item._id}
@@ -33,7 +33,7 @@ export default function Projects({ project }: Props) {
                   transition={{ duration: 1.2 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="w-36 h-36  sm:w-40 sm:h-40 md:w-42 md:h-42 xl:w-[300px] object-cover xl:h-[300px]"
+                  className="max-w-90 max-h-80 lg:mt-8 object-contain rounded-lg"
                   src={urlFor(item.image).url()}
                   alt={item.title}
                 />
@@ -48,7 +48,7 @@ export default function Projects({ project }: Props) {
                   </span>
                   {item.title}
                 </h4>
-                <p className="text-center   text-sm md:text-lg md:text-left">
+                <p className="text-center max-h-[100px] overflow-auto border-[1px] border-yellow-500 p-5 rounded-lg scrollbar scrollbar-thumb-[#F7AB0A]/80  text-sm md:text-lg md:text-left">
                   {item.summary}
                 </p>
               </div>

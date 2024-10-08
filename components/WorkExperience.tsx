@@ -19,7 +19,7 @@ export default function WorkExperience({ experiences}: Props) {
       </h3>
 
       <div className={`flex -mb-24 ${experiences.length!=1? 'items-start justify-start ' :'items-center justify-center'}  scrollbar  scrollbar-thumb-[#F7AB0A]/80 space-x-5 w-full overflow-x-scroll snap-x   snap-mandatory`}>
-       {experiences.map((experience)=>{
+       {experiences.sort((a, b) => new Date(b._createdAt).getTime() - new Date(a._createdAt).getTime()).map((experience)=>{
         return(
           <ExperienceCard key={experience._id} experience={experience}/>
         )

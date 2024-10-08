@@ -19,13 +19,15 @@ function Skills({ skills }: Props) {
     >
       <h3 className="pageHeading">Skills</h3>
 
-      <h3 className="absolute top-[18vh] sm:top-36 uppercase tracking-[3px] text-gray-500 text-sm">
+      {/* <h3 className="absolute top-[18vh] sm:top-36 uppercase tracking-[3px] text-gray-500 text-sm">
         Hover over a skill for description
-      </h3>
+      </h3> */}
 
       <div className={`gap-2 mt-[13vh] grid grid-cols-4 sm:gap-5 sm:mt-20 xl:scale-90 xl:translate-y-12`}>
         {skills?.map((skill) => (
-          <Skill key={skill._id} skill={skill}  />
+          <div key={skill._id}  className="rounded-full hover:scale-110 duration-300 ease-in-out  ">
+          <Skill skill={skill}  />
+          </div>
         ))}
 
         {/* {skills?.slice(skills.length / 2, skills.length).map((skill) => (
