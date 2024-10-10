@@ -101,7 +101,7 @@ export default function Projects({ project }: Props) {
                   <>
                     <SwiperSlide >
                       <Link href={item.linkToBuild}>
-                      <div className="mx-auto cursor-pointer   flex flex-col items-center justify-center w-[350px] sm:w-[450px] md:w-[600px] lg:w-[700px]  h-[100vh] rounded-md">
+                      <div className="mx-auto cursor-pointer   flex flex-col items-center justify-center w-[350px] sm:w-[450px] md:w-[600px] lg:w-[700px]  h-[90vh] xl:h-[100vh] rounded-md">
                         <img
                           src={urlFor(item.image).url()}
                           alt={item.title}
