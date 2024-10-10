@@ -91,7 +91,7 @@ export default function Projects({ project }: Props) {
               modifier: 1,
               slideShadows: true,
             }}
-            pagination={true}
+            pagination={false}
             modules={[EffectCoverflow, Pagination]}
             className="mySwiper w-[800px] flex flex-col"
           >
